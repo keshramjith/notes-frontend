@@ -1,9 +1,9 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CreateAccount from "./CreateAccount";
 import App from "./App";
 import { ChakraProvider } from "@chakra-ui/react";
+import Dashboard from "./components/pages/Dashboard";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +15,10 @@ const router = createBrowserRouter([
         element: <CreateAccount />,
       },
     ],
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
   },
 ]);
 

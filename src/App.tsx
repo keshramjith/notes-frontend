@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Flex, Box } from "@chakra-ui/react";
+import { Outlet } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Flex
+      backgroundColor="#805AD5"
+      minHeight="100vh"
+      flexDirection="column"
+      align="center"
+      justify="center"
+    >
+      <Box borderRadius="1.5em" backgroundColor="white" p="2.5rem" width="30em">
+        <Outlet />
+      </Box>
+    </Flex>
   );
-}
+};
 
 export default App;
